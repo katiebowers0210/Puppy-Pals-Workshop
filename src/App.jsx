@@ -22,21 +22,21 @@ function App() {
       <div className='App'>
         {puppies.map((puppy) => {
           return(
-            <p onClick={() => {handleClick(puppy.id) }} key={puppy.id}>
+            <p className='click-puppy' onClick={() => {handleClick(puppy.id) }} key={puppy.id}>
             {puppy.name}</p>
           );
           })
         }
         {featPupId && (
-          <div>
-            <h2>{featuredPup.name}</h2>
+          <div className='pup-id'>
+            <h2>You've selected:</h2>
+            <h3>{featuredPup.name}</h3>
             <ul>
               <li>Age: {featuredPup.age}</li>
               <li>Email: {featuredPup.email}</li>
             </ul>
             </div>
         )}
-      {/* {featPupId && <p>Selected Puppy ID: {featPupId}</p>} */}
       </div>
     </>
   );
